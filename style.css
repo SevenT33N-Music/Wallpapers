@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Jakarta Sans';
+  src: url('PlusJakartaSans-Regular.ttf');
+}
 html, body {
   height: 100%;
   width: 100%;
@@ -5,15 +9,28 @@ html, body {
   padding: 0;
   overflow-x: clip;
 }
+* {
+  font-family: 'Jakarta Sans', sans-serif;
+}
+hr {
+  width: 80vw;
+  height: 2px;
+  color: black;
+  background-color: black;
+}
 
 .container {
+  padding: 0;
   height: fit-content;
-  width: 100vw;
+  width: 90vw;
+  margin: 10px 5vw;
+  background-color: #ddd;
+  border-radius: 10px;
   display: block;
 }
 
 .filter-list {
-  height: 50vh;
+  height: fit-content;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -35,11 +52,24 @@ html, body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow: clip;
   padding: 0;
   padding-top: 5%;
+}
+.search-bar input {
+  width: 50%;
+  height: 5vh;
+  border: none;
+  border-bottom: 3px solid black;
+  outline: none;
+  transition: border-bottom 0.25s ease, width 0.5s ease;
+}
+.search-bar input:focus {
+  transition: border-bottom 0.25s ease, width 0.35s ease;
+  width: 80%;
+  border-bottom: 3px solid #00bfff;
 }
 
 .wallpapers {
@@ -91,13 +121,25 @@ html, body {
 .wallpaper-item img {
   width: 100%;
   height: auto;
-  max-width: 400px;
+  max-width: 600px;
 }
+
 @media screen and (min-width: 1000px) {
+  hr {
+    width: 80vw;
+    height: 8px;
+    color: #262626;
+    background-color: #262626;
+  }
   .wallpaper-list {
     grid-template-columns: repeat(2, 1fr);
   }
   .wallpaper-list h1 {
     margin-top: 12vh;
+  }
+  .wallpaper-item img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
   }
 }
