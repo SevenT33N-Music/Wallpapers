@@ -4,12 +4,130 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Wallpapers</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  Hello world
+  <div class="container">
+    <section class="filter-list">
+      <!--
+      <div class="filter-btns">
+        <div class="filter-item allFilterBtn" onclick="setFilter('all')">Show All</div>
+        <div class="filter-item dodgeFilterBtn" onclick="setFilter('dodge')">Dodge</div>
+        <div class="filter-item mazdaFilterBtn" onclick="setFilter('mazda')">Mazda</div>
+        <div class="filter-item nissanFilterBtn" onclick="setFilter('nissan')">Nissan</div>
+        <div class="filter-item subaruFilterBtn" onclick="setFilter('subaru')">Subaru</div>
+        <div class="filter-item chevyFilterBtn" onclick="setFilter('chevy')">Chevrolet</div>
+      </div>
+      -->
+      <div class="search-bar">
+        <input type='text' placeholder="Search..." oninput="checkFilter(this.value)"/>
+      </div>
+    </section>
+    <section class="wallpapers">
+      <div class="wallpaper-list dodge">
+        <h1>Dodge</h1>
+        <div class="wallpaper-item challenger">
+          <a href="wallpapers/dodge/challenger1.jpg" download="Dodge Challenger Hellcat Wallpaper 1" class="wallpaper-download">
+            <img src="wallpapers/dodge/challenger1.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+      </div>
+      <div class="wallpaper-list mit">
+        <h1>Mitsibushi</h1>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer1.png" download="Mitsibushi Lancer Wallpaper 1" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer1.png">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer2.png" download="Mitsibushi Lancer Wallpaper 2" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer2.png">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer3.png" download="Mitsibushi Lancer Wallpaper 3" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer3.png">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer4.jpg" download="Mitsibushi Lancer Wallpaper 4" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer4.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer5.jpg" download="Mitsibushi Lancer Wallpaper 5" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer5.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer6.jpg" download="Mitsibushi Lancer Wallpaper 6" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer6.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item lancer">
+          <a href="wallpapers/mit/lancer7.jpg" download="Mitsibushi Lancer Wallpaper 7" class="wallpaper-download">
+            <img src="wallpapers/mit/lancer7.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+      </div>
+      <div class="wallpaper-list nissan">
+        <h1>Nissan</h1>
+        <div class="wallpaper-item 350z">
+          <a href="wallpapers/nissan/350z1.jpg" download="Nissan 350Z Wallpaper 1" class="wallpaper-download">
+            <img src="wallpapers/nissan/350z1.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item 350z">
+          <a href="wallpapers/nissan/350z2.jpg" download="Nissan 350Z Wallpaper 2" class="wallpaper-download">
+            <img src="wallpapers/nissan/350z2.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item 350z">
+          <a href="wallpapers/nissan/350z3.jpg" download="Nissan 350Z Wallpaper 3" class="wallpaper-download">
+            <img src="wallpapers/nissan/350z3.jpg">
+          </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+      </div>
+      <div class="wallpaper-list subaru">
+        <h1>Subaru</h1>
+        <div class="wallpaper-item brz">
+          <a href="wallpapers/subaru/brz1.png" download="Subaru BRZ Wallaper 1" class="wallpaper-download">
+          <img src="wallpapers/subaru/brz1.png">
+        </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item brz">
+          <a href="wallpapers/subaru/brz2.png" download="Subaru BRZ Wallaper 2" class="wallpaper-download">
+          <img src="wallpapers/subaru/brz2.png">
+        </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+        <div class="wallpaper-item brz">
+          <a href="wallpapers/subaru/brz3.png" download="Subaru BRZ Wallaper 3" class="wallpaper-download">
+          <img src="wallpapers/subaru/brz3.png">
+        </a>
+          <div class="download-tooltip">Click Image to Download</div>
+        </div>
+      </div>
+      <div class="wallpaper-list chevy">
+        <h1>Chevrolet</h1>
+        <div class="wallpaper-item tbd"></div>
+      </div>
+    </section>
+  </div>
   <script src="script.js"></script>
 </body>
 

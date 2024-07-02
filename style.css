@@ -1,4 +1,103 @@
-html {
+html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+}
+
+.container {
+  height: fit-content;
+  width: 100vw;
+  display: block;
+}
+
+.filter-list {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: clip;
+}
+.filter-btns {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: clip;
+}
+.search-bar {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: clip;
+  padding: 0;
+  padding-top: 5%;
+}
+
+.wallpapers {
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  width: 100vw;
+  display: block;
+  overflow-y: auto;
+  overflow-x: clip;
+}
+.wallpaper-list {
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  overflow-y: auto;
+  overflow-x: clip;
+}
+.wallpaper-item {
+  position: relative;
+  width: 80%;
+  margin: 0 10%;
+  height: fit-content;
+}
+.wallpaper-item .wallpaper-download {
+  position: relative;
+}
+.wallpaper-item .download-tooltip {
+  transition: bottom 0.5s ease, opacity 0.3s ease;
+  position: absolute;
+  color: white;
+  background-color: rgb(33, 33, 33, 0.5);
+  bottom: 25%;
+  opacity: 0;
+  right: 2%;
+  height: fit-content;
+  width: fit-content;
+  padding: calc(1vw + 1vh);
+}
+.wallpaper-item:hover .download-tooltip {
+  transition: bottom 0.5s ease, opacity 0.65s ease;
+  opacity: 1;
+  bottom: 5%;
+}
+.wallpaper-item img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+@media screen and (min-width: 1000px) {
+  .wallpaper-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wallpaper-list h1 {
+    margin-top: 12vh;
+  }
 }
